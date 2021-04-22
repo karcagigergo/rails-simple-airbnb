@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+
+puts 'Cleaning database...'
+Flat.destroy_all
+
+puts "Creating Flats"
 5.times do
   Flat.create!(
     name: ['Light & Spacious Garden Flat London', 'Amazing Studio - Posh Area - Minutes Central', 
@@ -17,3 +22,5 @@ require 'faker'
     number_of_guests: rand(1..10)
   )
 end
+
+puts "Done!"
