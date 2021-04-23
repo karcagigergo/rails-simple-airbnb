@@ -47,6 +47,34 @@ Flat.create!(
     price_per_night: rand(25..200),
     number_of_guests: rand(1..10)
 )
+Flat.create!(
+    name: 'Best apartman ever!',
+    address: Faker::Address.full_address,
+    description: Faker::TvShows::RickAndMorty.quote,
+    price_per_night: rand(25..200),
+    number_of_guests: rand(1..10)
+)
+Flat.create!(
+    name: 'Light & Spacious Garden Flat London',
+    address: Faker::Address.full_address,
+    description: Faker::TvShows::RickAndMorty.quote,
+    price_per_night: rand(25..200),
+    number_of_guests: rand(1..10)
+)
+Flat.create!(
+    name: 'Amazing Studio - Posh Area - Minutes Central',
+    address: Faker::Address.full_address,
+    description: Faker::TvShows::RickAndMorty.quote,
+    price_per_night: rand(25..200),
+    number_of_guests: rand(1..10)
+)
+Flat.create!(
+    name: 'Lovely studio apartment very close to the city',
+    address: Faker::Address.full_address,
+    description: Faker::TvShows::RickAndMorty.quote,
+    price_per_night: rand(25..200),
+    number_of_guests: rand(1..10)
+)
 
 
 puts "Done!"

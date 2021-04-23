@@ -1,15 +1,16 @@
-<div class="navbar sticky-top navbar-light bg-light" id="navbar">
-  <a class="btn btn-primary" href="/">Home</a>
+<div class="navbar sticky-top navbar-light bg-white border-bottom" id="navbar">
+  <a class="btn btn-outline-primary" href="/">Home</a>
+  <a class="btn btn-outline-primary" href="/">Contact</a>
+  <a class="btn btn-outline-primary" href="/">About</a>
   <%# <%= link_to "See all the restaurants", restaurants_path, class: "nav-link text-light"%>
   <%# <%= link_to 'Add a new restaurant', new_restaurant_path, class: "nav-link text-light"%>
 </div>
 
-<div class="container d-flex justify-content-around mt-5">
+<div class="container d-flex justify-content-around" id="big-container">
   <div class="row">
     <% @flats.each do |flat| %>
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card-flat m-3">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
           <div class="card-flat-infos">
             <div>
               <h2 class="mb-2"><%= flat.name %></h2>
@@ -18,8 +19,8 @@
           </div>
           <div class="card-flat-pricing">
             <h2><%= flat.price_per_night %> <i class="fas fa-euro-sign"></i></h2>
-            <h2><%= flat.number_of_guests %></h2>
-            <h2><%= link_to "Show more", flat_path(flat) %></h2>
+            <h2><%= flat.number_of_guests %> <i class="fas fa-users"></i></h2>
+            <h2><%= link_to "Show more", flat_path(flat), class: "btn btn-outline-primary" %></h2>
           </div>
         </div>
       </div>
