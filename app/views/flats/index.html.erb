@@ -1,7 +1,28 @@
-<h1>These are all the flats:</h1>
+<div class="navbar sticky-top navbar-light bg-light" id="navbar">
+  <a class="btn btn-primary" href="/">Home</a>
+  <%# <%= link_to "See all the restaurants", restaurants_path, class: "nav-link text-light"%>
+  <%# <%= link_to 'Add a new restaurant', new_restaurant_path, class: "nav-link text-light"%>
+</div>
 
-<% @flats.each do |flat| %>
-  <ul>
-    <li><%= flat.name %><%= flat.address %></li>
-  </ul>
-<% end %>
+<div class="container d-flex justify-content-around mt-5">
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card-flat m-3">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <div class="card-flat-infos">
+            <div>
+              <h2 class="mb-2"><%= flat.name %></h2>
+              <p><%= flat.address %></p>
+            </div>
+          </div>
+          <div class="card-flat-pricing">
+            <h2><%= flat.price_per_night %> <i class="fas fa-euro-sign"></i></h2>
+            <h2><%= flat.number_of_guests %></h2>
+            <h2><%= link_to "Show more", flat_path(flat) %></h2>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
